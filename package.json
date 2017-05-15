@@ -28,12 +28,6 @@
     "eslint-plugin-react": "^7.0.1"
   },
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "morgan": "^1.8.1",
-    "path": "^0.12.7",
-    "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-polyfill": "^6.23.0",
@@ -41,8 +35,14 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }
