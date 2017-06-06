@@ -2,8 +2,16 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: './src/index.html',
+  filename: 'index.html',
+});
+
 module.exports = {
-  entry: './index.jsx',
+  devtool: 'cheap-module-eval-source-map',
+  entry: './src/index.jsx',
   
   module: {
     loaders: [
@@ -14,7 +22,11 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
-      }
+      },
+      { 
+        test: /\.css$/,
+        loaders: ['style-loader','css-loader'] 
+      },
     ]
   },
   target: 'web',
@@ -22,8 +34,9 @@ module.exports = {
     extensions: ['.js']
   },
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(`${__dirname}/dist`),
     filename: 'bundle.js'
   },
+  plugins: [ HtmlWebpackPluginConfig ] 
 
 };
